@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				tellet: {
+					primary: '#9b87f5',
+					secondary: '#7E69AB',
+					dark: '#1A1F2C',
+					light: '#D6BCFA',
+					gray: '#8E9196',
+				},
+				chain: {
+					ethereum: '#627EEA',
+					bitcoin: '#F7931A',
+					polygon: '#8247E5',
+					binance: '#F3BA2F',
+					avalanche: '#E84142',
+					fantom: '#1969FF',
+					dogecoin: '#C2A633',
+					cosmos: '#2E3148',
+					near: '#000000',
+					sui: '#6fbcf0',
+					sei: '#52B788',
+					tron: '#FF0013',
+					solana: '#9945FF',
+					mantra: '#8E44AD',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +108,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 			}
 		}
 	},
