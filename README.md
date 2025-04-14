@@ -1,127 +1,73 @@
+# Welcome to your Lovable project
 
-# Tellet-Test Wallet
+## Project info
 
-<p align="center">
-  <img src="public/favicon.png" alt="Tellet-Test Wallet Logo" width="80" height="80">
-</p>
+**URL**: https://lovable.dev/projects/0015d220-aaeb-40bb-8751-653499e8363b
 
-<p align="center">
-  A multi-chain cryptocurrency wallet for testing and development purposes
-</p>
+## How can I edit this code?
 
-## Overview
+There are several ways of editing your application.
 
-Tellet-Test Wallet is a demonstration application that showcases blockchain wallet functionality across multiple chains. It is designed for educational and testing purposes, providing a sandbox environment to understand how cryptocurrency wallets work.
+**Use Lovable**
 
-### Features
+Simply visit the [Lovable Project](https://lovable.dev/projects/0015d220-aaeb-40bb-8751-653499e8363b) and start prompting.
 
-- **Mnemonic Generation**: Create BIP39 compliant 12-word seed phrases
-- **Multi-Chain Support**: Derive addresses for 14+ different blockchains from a single mnemonic
-- **Message Signing**: Sign and verify messages using Ethereum keys
-- **Balance Simulation**: View simulated token balances across chains
-- **QR Code Generation**: Generate QR codes for any wallet address
+Changes made via Lovable will be committed automatically to this repo.
 
-### Supported Blockchains
+**Use your preferred IDE**
 
-- Ethereum (ETH)
-- Bitcoin (BTC) - Segwit & Taproot
-- Polygon (MATIC)
-- Binance Chain (BNB)
-- Avalanche (AVAX)
-- Fantom (FTM)
-- Dogecoin (DOGE)
-- Cosmos (ATOM)
-- Near Protocol (NEAR)
-- Sui (SUI)
-- Sei (SEI)
-- Tron (TRX)
-- Solana (SOL)
-- Mantra (OM)
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-## Getting Started
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-### Prerequisites
+Follow these steps:
 
-- Node.js (v18+)
-- npm or yarn
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-### Installation
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/tellet-test-wallet.git
+# Step 3: Install the necessary dependencies.
+npm i
 
-# Navigate to the project directory
-cd tellet-test-wallet
-
-# Install dependencies
-npm install
-
-# Start the development server
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-## Technical Architecture
+**Edit a file directly in GitHub**
 
-Tellet-Test Wallet is built with:
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-- **React**: Frontend UI framework
-- **Typescript**: Type-safe JavaScript
-- **Vite**: Fast, modern build tool
-- **TailwindCSS**: Utility-first CSS framework
-- **React Query**: Data fetching and state management
-- **shadcn/ui**: Component library
+**Use GitHub Codespaces**
 
-### Implementation Notes
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-- All cryptographic operations in this demo app are simulated, as it's designed for educational purposes.
-- In a production environment, real implementations would use Trust Wallet Core's WASM modules for cryptographic operations.
-- No seed phrases or private keys are ever stored persistently - everything remains in memory only.
+## What technologies are used for this project?
 
-## Security Notice
+This project is built with:
 
-⚠️ **IMPORTANT**: This is a TEST wallet for educational and development purposes only. 
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-- **NEVER** use this wallet for real cryptocurrency transactions
-- **NEVER** enter real seed phrases or private keys
-- All cryptographic operations are simulated
+## How can I deploy this project?
 
-## Development
+Simply open [Lovable](https://lovable.dev/projects/0015d220-aaeb-40bb-8751-653499e8363b) and click on Share -> Publish.
 
-### Project Structure
+## Can I connect a custom domain to my Lovable project?
 
-```
-/src
-  /components        # UI components
-  /hooks             # Custom React hooks
-  /lib               # Utility functions
-  /pages             # Application pages
-  /types             # TypeScript types
-  /contexts          # React contexts
-```
+Yes, you can!
 
-### Running Tests
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-```bash
-npm test
-```
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with [Lovable.dev](https://lovable.dev)
-- UI components from [shadcn/ui](https://ui.shadcn.com/)
-- Icons from [Lucide React](https://lucide.dev/)
-
----
-
-<p align="center">Created for educational and testing purposes only.</p>
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

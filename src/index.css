@@ -44,46 +44,6 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-secondary/50 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-tellet-primary/50 rounded-full transition-colors;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-tellet-primary;
-  }
-}
-
-@layer components {
-  .glass-card {
-    @apply backdrop-blur-sm bg-secondary/30 border border-white/5 shadow-lg;
-  }
-  
-  .neon-border {
-    @apply relative overflow-hidden before:absolute before:inset-0 before:p-[1px] before:rounded-lg before:bg-gradient-to-r before:from-tellet-primary/50 before:via-tellet-light/30 before:to-tellet-primary/50 before:animate-pulse-slow;
-  }
-  
-  .glow {
-    @apply relative after:absolute after:inset-0 after:rounded-lg after:bg-tellet-primary/20 after:opacity-0 after:transition-opacity hover:after:opacity-100;
-  }
-  
-  .menu-item {
-    @apply flex items-center space-x-2 p-2 rounded-md hover:bg-tellet-primary/10 transition-colors;
-  }
-  
-  .btn-gradient {
-    @apply bg-gradient-to-r from-tellet-primary to-tellet-secondary hover:from-tellet-secondary hover:to-tellet-primary transition-all duration-300;
   }
 }
 
@@ -92,59 +52,9 @@
 }
 
 .chain-card {
-  @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg neon-border glow;
+  @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg;
 }
 
 .monospace {
   font-family: 'Roboto Mono', monospace;
-}
-
-/* Animation utilities */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes pulse-slow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Dashboard specific styles */
-.dashboard-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
-}
-
-.header-gradient {
-  @apply bg-gradient-to-r from-tellet-dark via-tellet-primary/20 to-tellet-dark;
-}
-
-.chain-icon {
-  @apply flex items-center justify-center w-10 h-10 rounded-full bg-secondary shadow-inner;
-}
-
-/* Form elements */
-input:focus, textarea:focus, select:focus {
-  @apply ring-2 ring-tellet-primary/50 outline-none;
-}
-
-.input-group {
-  @apply relative;
-}
-
-.input-icon {
-  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground;
-}
-
-.input-with-icon {
-  @apply pl-10;
 }
