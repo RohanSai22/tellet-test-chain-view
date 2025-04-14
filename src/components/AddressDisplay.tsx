@@ -145,7 +145,10 @@ const ChainCard = ({ chain, address, privateKey, showPrivateKey, copyToClipboard
               variant="ghost" 
               size="icon" 
               className="h-6 w-6 flex-shrink-0 ml-2" 
-              onClick={() => copyToClipboard(address, chain.id)}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                copyToClipboard(address, chain.id);
+              }}
             >
               {isCopied ? <span className="text-green-500 text-xs">✓</span> : <Copy size={12} />}
             </Button>
