@@ -13,7 +13,6 @@ interface QRCodeProps {
 
 const QRCode = ({ data, size = 128, chain }: QRCodeProps) => {
   const [isClient, setIsClient] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -24,13 +23,9 @@ const QRCode = ({ data, size = 128, chain }: QRCodeProps) => {
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog>
       <DialogTrigger asChild>
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="h-8 w-8"
-        >
+        <Button variant="ghost" size="icon" className="h-8 w-8">
           <QrCode size={16} />
         </Button>
       </DialogTrigger>

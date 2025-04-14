@@ -13,16 +13,14 @@ const AddressDisplay = () => {
   const { addresses, privateKeys, showPrivateKeys, setShowPrivateKeys, exportAddresses } = useWallet();
   const [copiedAddress, setCopiedAddress] = useState<string | null>(null);
   
-  const copyToClipboard = async (text: string, chainId: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedAddress(chainId);
-      toast.success('Address copied to clipboard');
-      setTimeout(() => setCopiedAddress(null), 2000);
-    } catch (err) {
-      console.error('Failed to copy address:', err);
-      toast.error('Failed to copy address');
-    }
+  const copyToClipboard = (text: string, chainId: string) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        setCopiedAddress(chainId);
+        toast.success('Address copied to clipboard');
+        setTimeout(() => setCopiedAddress(null), 2000);
+      })
+      .catch(() => toast.error('Failed to copy address'));
   };
 
   const toggleShowPrivateKeys = () => {
@@ -140,15 +138,12 @@ const ChainCard = ({ chain, address, privateKey, showPrivateKey, copyToClipboard
         <div>
           <div className="text-xs font-medium text-muted-foreground mb-1">Address</div>
           <div className="flex items-center justify-between">
-            <div className="crypto-address overflow-hidden text-ellipsis">{address}</div>
+            <div className="crypto-address">{address}</div>
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-6 w-6 flex-shrink-0 ml-2" 
-              onClick={(e) => {
-                e.stopPropagation(); // Prevent event bubbling
-                copyToClipboard(address, chain.id);
-              }}
+              className="h-6 w-6" 
+              onClick={() => copyToClipboard(address, chain.id)}
             >
               {isCopied ? <span className="text-green-500 text-xs">✓</span> : <Copy size={12} />}
             </Button>
@@ -158,7 +153,7 @@ const ChainCard = ({ chain, address, privateKey, showPrivateKey, copyToClipboard
         {showPrivateKey && (
           <div>
             <div className="text-xs font-medium text-destructive mb-1">Private Key (Danger!)</div>
-            <div className="crypto-address bg-destructive/10 p-2 rounded-md text-destructive overflow-hidden text-ellipsis">
+            <div className="crypto-address bg-destructive/10 p-2 rounded-md text-destructive">
               {privateKey}
             </div>
           </div>
