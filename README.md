@@ -49,10 +49,10 @@ Tellet-Test Wallet is a demonstration application that showcases blockchain wall
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tellet-test-wallet.git
+git clone https://github.com/RohanSai22/tellet-test-chain-view.git
 
 # Navigate to the project directory
-cd tellet-test-wallet
+cd tellet-test-chain-view
 
 # Install dependencies
 npm install
@@ -96,8 +96,6 @@ Tellet-Test Wallet is built with:
   /hooks             # Custom React hooks
   /lib               # Utility functions
   /pages             # Application pages
-  /types             # TypeScript types
-  /contexts          # React contexts
 ```
 
 ### Running Tests
@@ -115,12 +113,6 @@ npm run build
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with [Lovable.dev](https://lovable.dev)
-- UI components from [shadcn/ui](https://ui.shadcn.com/)
-- Icons from [Lucide React](https://lucide.dev/)
 
 ---
 
