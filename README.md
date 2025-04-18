@@ -70,7 +70,6 @@ Tellet-Test Wallet is built with:
 - **Vite**: Fast, modern build tool
 - **TailwindCSS**: Utility-first CSS framework
 - **React Query**: Data fetching and state management
-- **shadcn/ui**: Component library
 
 ### Implementation Notes
 
